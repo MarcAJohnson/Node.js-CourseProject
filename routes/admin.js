@@ -1,4 +1,3 @@
-const path = require('path');
 
 const express = require('express');
 
@@ -16,5 +15,9 @@ router.post('/add-product', productsController.postAddProduct);
 // syntax used when using products array in the route folder... now used in products controller
 // exports.routes = router;
 // exports.products = products;
+
+router.get('/product-list', productsController.getAdminProductList);
+
+router.get('/edit-product', productsController.getEditProduct);
 
 module.exports = router;
